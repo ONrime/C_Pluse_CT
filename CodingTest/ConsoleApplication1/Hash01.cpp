@@ -5,7 +5,7 @@
 
 using namespace std;
 
-string solution3(vector<string> participant, vector<string> completion) {
+string solution(vector<string> participant, vector<string> completion) {
     string answer = "";
     unordered_map<string, int> participant_Hash;
 
@@ -37,11 +37,11 @@ string solution3(vector<string> participant, vector<string> completion) {
     return answer;
 }
 
-int main()
+/*int main()
 {
-    std::cout << "solution: " << solution3({ "mislav", "stanko", "mislav", "ana" }, { "stanko", "ana", "mislav" }) << endl;
-    std::cout << "solution: " << solution3({ "marina", "josipa", "nikola", "vinko", "filipa" }, { "josipa", "filipa", "marina", "nikola" }) << endl;
-}
+    std::cout << "solution: " << solution({ "mislav", "stanko", "mislav", "ana" }, { "stanko", "ana", "mislav" }) << endl;
+    std::cout << "solution: " << solution({ "marina", "josipa", "nikola", "vinko", "filipa" }, { "josipa", "filipa", "marina", "nikola" }) << endl;
+}*/
 /*
 
 문제 설명

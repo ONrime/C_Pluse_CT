@@ -24,5 +24,8 @@
     <ClCompile Include="H-Index_Sort.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Combine-Greate-Num_Sort.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

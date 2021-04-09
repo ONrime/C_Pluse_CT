@@ -151,6 +151,12 @@
     <ClCompile Include="H-Index_Sort.cpp" />
     <ClCompile Include="Hash01.cpp" />
     <ClCompile Include="Hash02.cpp" />
+    <ClCompile Include="linked_list.cpp" />
+    <ClCompile Include="MouiTest_serch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="linked_list.h" />
+    <ClInclude Include="pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

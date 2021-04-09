@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\structure">
+      <UniqueIdentifier>{2b760d92-88df-424c-bf9c-9564971f822f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\structure">
+      <UniqueIdentifier>{d9e85cb2-c819-46eb-b0ee-dda9d152e83b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hash01.cpp">
@@ -27,5 +33,19 @@
     <ClCompile Include="Combine-Greate-Num_Sort.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="linked_list.cpp">
+      <Filter>소스 파일\structure</Filter>
+    </ClCompile>
+    <ClCompile Include="MouiTest_serch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_list.h">
+      <Filter>헤더 파일\structure</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

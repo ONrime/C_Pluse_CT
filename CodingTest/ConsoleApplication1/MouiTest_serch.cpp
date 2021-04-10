@@ -89,13 +89,13 @@ vector<int> solution2(vector<int> answers) { // 나머지 방법을 이용하여 일정 구간
     return answer;
 }
 
-int main()
+/*int main()
 {
     solution({ 1,2,3,4,5 }); // 1
     solution2({ 1,2,3,4,5 }); // 1
     solution({ 1,3,2,4,2 }); // 1,2,3
     solution2({ 1,3,2,4,2 }); // 1,2,3
-}
+}*/
 
 /*
 

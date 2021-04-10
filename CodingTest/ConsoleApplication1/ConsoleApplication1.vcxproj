@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camouflage_Sort.cpp" />
     <ClCompile Include="Combine-Greate-Num_Sort.cpp" />
     <ClCompile Include="H-Index_Sort.cpp" />
     <ClCompile Include="Hash01.cpp" />

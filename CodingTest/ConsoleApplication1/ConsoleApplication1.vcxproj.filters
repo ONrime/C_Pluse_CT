@@ -27,19 +27,22 @@
     <ClCompile Include="Hash02.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="H-Index_Sort.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Combine-Greate-Num_Sort.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="linked_list.cpp">
       <Filter>소스 파일\structure</Filter>
     </ClCompile>
-    <ClCompile Include="MouiTest_serch.cpp">
+    <ClCompile Include="Hash_Combine-Greate-Num.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Camouflage_Sort.cpp">
+    <ClCompile Include="Sort_Camouflage.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort_H-Index.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Serch_MouiTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Serch_Find_PrimeNumber.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

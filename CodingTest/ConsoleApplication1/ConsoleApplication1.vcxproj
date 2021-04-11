@@ -147,13 +147,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Camouflage_Sort.cpp" />
-    <ClCompile Include="Combine-Greate-Num_Sort.cpp" />
-    <ClCompile Include="H-Index_Sort.cpp" />
+    <ClCompile Include="Sort_Camouflage.cpp" />
+    <ClCompile Include="Hash_Combine-Greate-Num.cpp" />
+    <ClCompile Include="Serch_Find_PrimeNumber.cpp" />
+    <ClCompile Include="Sort_H-Index.cpp" />
     <ClCompile Include="Hash01.cpp" />
     <ClCompile Include="Hash02.cpp" />
     <ClCompile Include="linked_list.cpp" />
-    <ClCompile Include="MouiTest_serch.cpp" />
+    <ClCompile Include="Serch_MouiTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="linked_list.h" />

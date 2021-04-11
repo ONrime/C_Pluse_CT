@@ -1,3 +1,6 @@
-﻿  MouiTest_serch.cpp
-D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\MouiTest_serch.cpp(63,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+﻿  Serch_Find_PrimeNumber.cpp
+D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\Serch_Find_PrimeNumber.cpp(14,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\Serch_Find_PrimeNumber.cpp(41,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\Serch_Find_PrimeNumber.cpp(73,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\Serch_Find_PrimeNumber.cpp(87,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   ConsoleApplication1.vcxproj -> D:\GitHub\CodeTest\CodingTest\Debug\ConsoleApplication1.exe

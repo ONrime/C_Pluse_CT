@@ -3,7 +3,7 @@
 #include <iostream>
 #include <algorithm>
 #include <sstream>
-#include <cmath >
+#include <cmath>
 
 using namespace std;
 // а╤гу
@@ -101,13 +101,72 @@ int solution(string numbers) {
     return answer;
 }
 
-int main()
-{
-    //cout << "answer: " << solution("17") << endl; // 3
-    //cout << "answer: " << solution("011") << endl; // 2
-    cout << "answer: " << solution("333") << endl; // 2
-    cout << "answer: " << solution("1234") << endl; // 2
+int solution2(string numbers) {
+    int answer = 0;
+    vector<int> num;
+    vector<int> num2;
+    vector<int> prime_num;
+    vector<int> check;
+
+    for (int i = 0; i < numbers.size(); i++) {
+        num.push_back(numbers[i] - '0');
+        check.push_back(0);
+    }
+    cout << "num: ";
+    for (auto it = num.begin(); it != num.end(); it++) {
+        cout << *it << " ";
+    }
+    cout << endl;
+    sort(num.begin(), num.end());
+
+    for (int i = 0; i < numbers.size(); i++) {
+        check[i] = 1;
+        int a = check[i];
+        do {
+            string sum;
+            for (int j = 0; j < check.size(); j++) {
+                if (check[j] == 1) {
+                    sum += to_string(num[j]);
+                    cout << "num3: "<< num[j] <<endl;
+                }
+            }
+            num2.push_back(stoi(sum));
+        } while (next_permutation(num.begin(), num.end()));
+    }
+    sort(num2.begin(), num2.end());
+    num2.erase(unique(num2.begin(), num2.end()), num2.end());
+
+    cout << "num2: ";
+    for (auto it = num2.begin(); it != num2.end(); it++) {
+        cout << *it << " ";
+    }
+    cout << endl;
+
+    cout << "prime_number: ";
+    for (int i = 0; i < num2.size(); i++) {
+        if (prime_number_check(num2[i])) {
+            if (prime_num.size() == 0 || num2[i] != prime_num.back()) {
+                prime_num.push_back(num2[i]);
+                answer++;
+                cout << num2[i] << " ";
+            }
+
+        }
+    }
+    cout << endl;
+
+
+
+    return answer;
 }
+
+/*int main()
+{
+    cout << "answer: " << solution2("17") << endl; // 3
+    //cout << "answer: " << solution2("011") << endl; // 2
+    //cout << "answer: " << solution2("333") << endl; // 2
+    //cout << "answer: " << solution2("1234") << endl; // 2
+}*/
 
 /*
 

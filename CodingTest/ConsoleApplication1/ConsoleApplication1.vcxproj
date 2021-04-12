@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Serach_MakeCarpet.cpp" />
     <ClCompile Include="Sort_Camouflage.cpp" />
     <ClCompile Include="Hash_Combine-Greate-Num.cpp" />
     <ClCompile Include="Serch_Find_PrimeNumber.cpp" />

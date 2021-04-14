@@ -51,6 +51,9 @@
     <ClCompile Include="Hash_BestAlbum.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Greedy_Gymsuit.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

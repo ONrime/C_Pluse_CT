@@ -71,7 +71,7 @@ vector<int> solution(vector<string> genres, vector<int> plays) {
     return answer;
 }
 
-int main()
+/*int main()
 {
     solution({ "classic", "pop", "classic", "classic", "pop" }, { 500, 600, 150, 800, 2500 }); // 4 1 3 0
     solution({ "classic", "pop", "classic", "classic", "pop", "oldpop" }, { 500, 600, 150, 800, 2500, 50 });
@@ -79,7 +79,7 @@ int main()
     solution({ "classic","classic","classic","classic","pop" }, { 500,150,800,800,2500 });
     solution({ "classic", "pop", "classic", "pop", "classic", "classic" }, { 400, 600, 150, 600, 500, 500 });
     solution({ "pop", "pop", "pop", "rap", "rap" }, { 45, 50, 40, 60, 70 });
- } 
+ }*/
 
 /*
 

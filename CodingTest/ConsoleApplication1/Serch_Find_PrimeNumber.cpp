@@ -7,7 +7,7 @@
 
 using namespace std;
 // а╤гу
-void combination(vector<char>& combi, vector<int>& out, string numbers, int length, int current_len, int i) {
+/*void combination(vector<char>& combi, vector<int>& out, string numbers, int length, int current_len, int i) {
     //cout << "combination: " << endl; // 3
     if (length == 0) {
         string out_num;
@@ -158,7 +158,7 @@ int solution2(string numbers) {
 
 
     return answer;
-}
+}*/
 
 /*int main()
 {

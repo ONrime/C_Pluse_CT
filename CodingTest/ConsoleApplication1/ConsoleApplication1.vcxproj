@@ -147,7 +147,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Greedy_GreatNum.cpp" />
     <ClCompile Include="Greedy_Gymsuit.cpp" />
+    <ClCompile Include="Greedy_Joystick.cpp" />
     <ClCompile Include="Hash_BestAlbum.cpp" />
     <ClCompile Include="Serach_MakeCarpet.cpp" />
     <ClCompile Include="Sort_Camouflage.cpp" />

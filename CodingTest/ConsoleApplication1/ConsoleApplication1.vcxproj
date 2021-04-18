@@ -151,6 +151,7 @@
     <ClCompile Include="Greedy_Gymsuit.cpp" />
     <ClCompile Include="Greedy_Joystick.cpp" />
     <ClCompile Include="Hash_BestAlbum.cpp" />
+    <ClCompile Include="Heap_Scov.cpp" />
     <ClCompile Include="Serach_MakeCarpet.cpp" />
     <ClCompile Include="Sort_Camouflage.cpp" />
     <ClCompile Include="Hash_Combine-Greate-Num.cpp" />

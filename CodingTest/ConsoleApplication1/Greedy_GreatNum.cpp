@@ -1,17 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include<string>
+#include <string>
 
 using namespace std;
 
-// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
-char* solution(const char* number, int k) {
-    // return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
-    char* answer = (char*)malloc(1);
+
+string solution(string number, int k) {
+    string answer = "";
     string a = number;
     vector<int> temp;
     int n = a.size() - k;
@@ -34,19 +34,30 @@ char* solution(const char* number, int k) {
             max = num_;
         }
     } while (prev_permutation(temp.begin(), temp.end()));
-    string b = to_string(max);
-    //answer = b;
-    cout << "answer: " << b << endl;
-    //cout << "answer: " << a << endl;
+
+    answer = to_string(max);
     return answer;
 }
 
-/*int main()
+string solution2(string number, int k) {
+    string answer = "";
+    string a = number;
+    vector<int> temp;
+
+    for (int i = 0; i < number.size(); i++) {
+
+    }
+
+    cout << "answer: " << answer << endl;
+    return answer;
+}
+
+int main()
 {
-    solution("1924", 2); // 94
-    solution("1231234", 3); // 3234
-    solution("4177252841", 4); // 775841
-}*/
+    solution2("1924", 2); // 94
+    //solution2("1231234", 3); // 3234
+    //solution2("4177252841", 4); // 775841
+}
 
 /*
 

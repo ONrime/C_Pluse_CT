@@ -42,21 +42,183 @@ string solution(string number, int k) {
 string solution2(string number, int k) {
     string answer = "";
     string a = number;
-    vector<int> temp;
+    answer = number;
+    int cut = answer.size() - k;
+    int min = 10;
+    int min_ = 0;
+    for (int i = 0; i < answer.size(); i++) {
+        min = 10;
+        for (int j = 0; j < k; j++) {
+            int num = answer[j] - '0';
+            if (min > num) {
+                min = num;
+                min_ = j;
+            }
+        }
+        answer.erase(answer.begin() + min_);
+        if (answer.size() == cut) break;
+    }
+    cout << "answer: " << 7/2 << endl;
+    return answer;
+}
+
+/*string solution3(string number, int k) {
+    string answer = "";
+    string answer2 = number;
+    answer = number;
+    int line = number.size() - k;
+
+    sort(answer.begin(), answer.end());
+    sort(answer2.begin(), answer2.end());
+    auto it_del=unique(answer.begin(), answer.end());
+    int full_size = answer.size();
+
+    answer.erase(it_del, answer.end());
+    cout << "answer: " << answer << endl;
+    //cout << "answedr: " << number.size()<<" " << k << endl;
+
+    int m = full_size - answer.size();
+    //cout << "full_size: " << full_size << endl;
+    int cut = full_size /2;
+    //k = (k - m);
+    //cut > k ? cut = k : cut = k;
+    m>k?
+    m == 0 ? cut = k : cut = (answer.size() / 2) - m;
+    
+    for (int i = 0; i < number.size(); i++) {
+        if (number[i] < answer2[cut]) {
+            number.erase(number.begin() + i);
+            i--;
+        }
+        if (number.size() == line) break;
+    }
+    cout << "answer!!: " << number << endl;
+    return number;
+}*/
+
+/*string solution3(string number, int k) {
+    string answer = "";
+    answer = number;
+    int line = number.size() - k;
+
+    sort(answer.begin(), answer.end());
+    int full_size = answer.size();
+    cout << "answer: " << answer << endl;
+
+    int m = full_size - answer.size();
+    int cut = k-1;
 
     for (int i = 0; i < number.size(); i++) {
+        int x=answer[cut]-'0';
+        if (number[i] - '0' <= answer[cut] - '0') {
+            number.erase(number.begin() + i);
+            i--;
+        }
+        if (number.size() == line) break;
+    }
+    cout << "answer!!: " << number << endl;
+    return number;
+}*/
 
+bool comp(int a, int b) {
+    return a > b;
+}
+
+/*string solution3(string number, int k) {
+    string answer = "";
+    answer = number;
+    int line = number.size() - k;
+
+    sort(answer.begin(), answer.end(), comp);
+    int full_size = answer.size();
+    cout << "answer: " << answer << endl;
+
+    int m = full_size - answer.size();
+    //int cut = k-1;
+    int cut = (answer.size()/2)+1;
+    int i = 0;
+    int  now = number.size();
+    while (number.size() != line) {
+        int x = answer[cut] - '0';
+        int y = number[i] - '0';
+        if (number[i] - '0' <= answer[cut] - '0') {
+            number.erase(number.begin() + i);
+            i--;
+        }
+        i++;
+        if (i == number.size()) {
+            cut -= 1;
+            i = 0;
+        }
+    }
+    cout << "answer!!: " << number << endl;
+    return number;
+}*/
+string solution3(string number, int k) {
+    string answer = "";
+    answer = number;
+    int line = number.size() - k;
+
+    sort(answer.begin(), answer.end(), comp);
+    int full_size = answer.size();
+    cout << "answer: " << answer << endl;
+
+    int m = full_size - answer.size();
+    //int cut = k-1;
+    //int cut = (answer.size() / 2) + 1;
+    int cut = (answer.size() - k) ;
+    int i = 0;
+    for (auto it = answer.begin(); it != answer.end(); it++) {
+        int x = *it - '0';
+        int y = number[i] - '0';
+        if (*it - '0' > number[i] - '0') {
+            number.erase(number.begin() + i);
+            i--;
+        }
+        i++;
+        if (number.size() == line) break;
     }
 
-    cout << "answer: " << answer << endl;
-    return answer;
+    
+    int j = 0;
+    int  now = number.size();
+    while (number.size() != line) {
+        int x = answer[cut] - '0';
+        int y = number[j] - '0';
+        if (number[j] - '0' <= answer[cut] - '0') {
+            number.erase(number.begin() + j);
+            j--;
+        }
+        j++;
+        if (j == number.size()) {
+            cut -= 1;
+            j = 0;
+        }
+    }
+    cout << "answer!!: " << number << endl;
+    return number;
+
+    /*for (int i = 0; i < number.size(); i++) {
+        int x = answer[i] - '0';
+        int y = number[i-l] - '0';
+        if (answer[i] - '0' > number[i-l] - '0') {
+            number.erase(number.begin() + i-l);
+            l++;
+        }
+        if (number.size() == line) break;
+    }*/
 }
 
 int main()
 {
-    solution2("1924", 2); // 94
-    //solution2("1231234", 3); // 3234
-    //solution2("4177252841", 4); // 775841
+    //solution3("1924", 2); // 94
+    //solution3("1904", 2); // 94
+    //solution3("1231234", 3); // 3234
+    //solution3("4177252841", 4); // 775841
+    solution3("4175284", 4); // 784
+    solution3("87654321", 3); // 87654
+    solution3("648245365", 7); // 87654
+    //solution3("87654321", 3); // 87654
 }
 
 /*

@@ -1,7 +1,5 @@
 ﻿  Greedy_GreatNum.cpp
 D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\Greedy_GreatNum.cpp(21,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\Greedy_GreatNum.cpp(27,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\Greedy_GreatNum.cpp(47,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  Heap_Scov.cpp
-  코드를 생성하고 있습니다...
+D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\Greedy_GreatNum.cpp(49,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   ConsoleApplication1.vcxproj -> D:\GitHub\CodeTest\CodingTest\Debug\ConsoleApplication1.exe

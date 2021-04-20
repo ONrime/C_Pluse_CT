@@ -1,7 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -9,8 +5,70 @@
 
 using namespace std;
 
+string solution3(string number, int k) {
+    string answer = "";
+    int line = number.size() - k;
+    int max_i = -1;
+    for (int i = 0; i < number.length() - k; i++) {
+        int max = 0;
+        for (int j = max_i + 1; j <= k + i; j++) {
+            if (max < number[j]- '0') {
+                max_i = j;
+                max = number[j] - '0';
+            }
+        }
+        answer += to_string(max);
+    }
+    cout << "answer!: " << answer << endl;
+    return answer;
+}
 
-string solution(string number, int k) {
+/*int main()
+{
+    solution3("1924", 2); // 94
+    //solution3("1904", 2); // 94
+    //solution3("1231234", 3); // 3234
+    //solution3("4177252841", 4); // 775841
+    //solution3("75284", 2); // 78
+    //solution3("4175284", 4); // 784
+    solution3("87654321", 3); // 87654
+    //solution3("648245365", 7); // 86
+    //solution3("845365", 4); // 86
+}*/
+
+/*
+
+큰 수 만들기
+
+문제 설명
+어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다.
+
+예를 들어, 숫자 1924에서 수 두 개를 제거하면 [19, 12, 14, 92, 94, 24] 를 만들 수 있습니다. 이 중 가장 큰 숫자는 94 입니다.
+
+문자열 형식으로 숫자 number와 제거할 수의 개수 k가 solution 함수의 매개변수로 주어집니다. number에서 k 개의 수를 제거했을 때 만들 수 있는 수 중 가장 큰 숫자를 문자열 형태로 return 하도록 solution 함수를 완성하세요.
+
+제한 조건
+number는 1자리 이상, 1,000,000자리 이하인 숫자입니다.
+k는 1 이상 number의 자릿수 미만인 자연수입니다.
+입출력 예
+number	k	return
+"1924"	2	"94"
+"1231234"	3	"3234"
+"4177252841"	4	"775841"
+
+*/
+
+
+
+
+/*
+
+여러 가지를 만든 끝에 도저히 안되서 다른 코드를 참고 했다.
+오랜 시간이 걸린 이유를 뽑자면 나는 탐욕법 답게 욕심이 과한 코드를 만들었다.
+한번 돌 때 계산하는 형태의 코드를 만들었는데 이게 메모리를 초과하는 문제가 있었다.
+너무 한번에 돌려서 풀려고 하는 코드를 만들기 보다는 변수나 함수를 생각하면서 푸는 습과을 가져야 된다.
+
+/*string solution(string number, int k) {
     string answer = "";
     string a = number;
     vector<int> temp;
@@ -62,7 +120,7 @@ string solution2(string number, int k) {
     return answer;
 }
 
-/*string solution3(string number, int k) {
+string solution3(string number, int k) {
     string answer = "";
     string answer2 = number;
     answer = number;
@@ -84,7 +142,7 @@ string solution2(string number, int k) {
     //cut > k ? cut = k : cut = k;
     m>k?
     m == 0 ? cut = k : cut = (answer.size() / 2) - m;
-    
+
     for (int i = 0; i < number.size(); i++) {
         if (number[i] < answer2[cut]) {
             number.erase(number.begin() + i);
@@ -94,9 +152,9 @@ string solution2(string number, int k) {
     }
     cout << "answer!!: " << number << endl;
     return number;
-}*/
+}
 
-/*string solution3(string number, int k) {
+string solution3(string number, int k) {
     string answer = "";
     answer = number;
     int line = number.size() - k;
@@ -118,13 +176,13 @@ string solution2(string number, int k) {
     }
     cout << "answer!!: " << number << endl;
     return number;
-}*/
+}
 
 bool comp(int a, int b) {
     return a > b;
 }
 
-/*string solution3(string number, int k) {
+string solution3(string number, int k) {
     string answer = "";
     answer = number;
     int line = number.size() - k;
@@ -153,7 +211,7 @@ bool comp(int a, int b) {
     }
     cout << "answer!!: " << number << endl;
     return number;
-}*/
+}
 string solution3(string number, int k) {
     string answer = "";
     answer = number;
@@ -179,7 +237,7 @@ string solution3(string number, int k) {
         if (number.size() == line) break;
     }
 
-    
+
     int j = 0;
     int  now = number.size();
     while (number.size() != line) {
@@ -198,7 +256,7 @@ string solution3(string number, int k) {
     cout << "answer!!: " << number << endl;
     return number;
 
-    /*for (int i = 0; i < number.size(); i++) {
+    for (int i = 0; i < number.size(); i++) {
         int x = answer[i] - '0';
         int y = number[i-l] - '0';
         if (answer[i] - '0' > number[i-l] - '0') {
@@ -206,39 +264,102 @@ string solution3(string number, int k) {
             l++;
         }
         if (number.size() == line) break;
-    }*/
+    }
 }
 
-int main()
-{
-    //solution3("1924", 2); // 94
-    //solution3("1904", 2); // 94
-    //solution3("1231234", 3); // 3234
-    //solution3("4177252841", 4); // 775841
-    solution3("4175284", 4); // 784
-    solution3("87654321", 3); // 87654
-    solution3("648245365", 7); // 87654
-    //solution3("87654321", 3); // 87654
+string ssos(string num, int k, int& c) {
+    int max = num[0] - '0';
+    int back = 10;
+    string t;
+    for (int i = 0; i < num.size(); i++) {
+        if (num[i] - '0' > max) {  // max를 오버 할 때
+            max = num[i] - '0';
+            if (c + t.size() < k) {
+                c += t.size();
+                t.clear(); ;
+            }
+            else {
+                t = ssos(t, k, c);
+            }
+            back = num[i] - '0';
+            i--;
+        }
+        else {  // max 보다 낮을 때
+            if (num[i] - '0' > back) {  // 순서대로 진행이 안될 떄
+                //int cc = -1;
+                while (true) {
+                    t.pop_back();
+                    c++;
+                    //cc++;
+                    if (c == k || num[i] < t.back()) {
+                        back = num[i] - '0';
+                        //i--;
+                        t.push_back(num[i]);
+                        break;
+                    }
+                }
+            }
+            else {  // 순서대로 진행 될 때
+                t.push_back(num[i]);
+                back = num[i] - '0';
+            }
+        }
+        if (c == k) {
+            t += num.substr(i + 1, num.size());
+            break;
+        }
+    }
+    while (c != k) {
+        t.pop_back();
+        c++;
+    }
+    return t;
 }
 
-/*
+void ssos2(string& num, int k, int& c) {
+    int max = num[0] - '0';
+    int i = 0;
+    while (i < num.size()) {
+        if (num[i] - '0' > max) {  // max를 오버 할 때
+            max = num[i] - '0';
+            if (c + (i) < k) {
+                c += (i);
+                num.erase(num.begin(), num.begin() + i);
+                i = 0;
+            }
+            else {
+                while (c != k) {
+                    num.erase(num.begin() + (--i));
+                    c++;
+                }
+                return;
+            }
+        }
+        else {  // max 보다 낮을 때
+            if (i > 0 && num[i] - '0' > num[i - 1] - '0') {  // 순서대로 진행이 안될 떄
+                int ei = i;
+                while (true) {
+                    num.erase(num.begin() + (--ei));
+                    c++;
+                    if (c == k || num[ei] < num[ei - 1]) {
+                        i = ei;
+                        break;
+                    }
+                }
+            }
+            else {  // 순서대로 진행 될 때
+                i++;
+            }
+        }
+        if (c == k) {
+            return;
+        }
+    }
+    while (c != k) {
+        num.pop_back();
+        c++;
+    }
+}
 
-큰 수 만들기
-
-문제 설명
-어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다.
-
-예를 들어, 숫자 1924에서 수 두 개를 제거하면 [19, 12, 14, 92, 94, 24] 를 만들 수 있습니다. 이 중 가장 큰 숫자는 94 입니다.
-
-문자열 형식으로 숫자 number와 제거할 수의 개수 k가 solution 함수의 매개변수로 주어집니다. number에서 k 개의 수를 제거했을 때 만들 수 있는 수 중 가장 큰 숫자를 문자열 형태로 return 하도록 solution 함수를 완성하세요.
-
-제한 조건
-number는 1자리 이상, 1,000,000자리 이하인 숫자입니다.
-k는 1 이상 number의 자릿수 미만인 자연수입니다.
-입출력 예
-number	k	return
-"1924"	2	"94"
-"1231234"	3	"3234"
-"4177252841"	4	"775841"
 
 */

@@ -66,6 +66,9 @@
     <ClCompile Include="Heap_Scov.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Greedy_Boat.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

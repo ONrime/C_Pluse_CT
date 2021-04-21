@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int solution12(vector<int> scoville, int K) {
+/*int solution(vector<int> scoville, int K) {
     int answer = 0;
     priority_queue<int, vector<int>, greater<int>> scov;
 
@@ -35,18 +35,18 @@ int solution12(vector<int> scoville, int K) {
     }
 
     return answer;
-}
+}*/
 
 /*int main()
 {
-    cout << "answer: " << solution12({ 1, 2, 3, 9, 10, 12 }, 7) << "\n"; // 2
-    cout << "answer: " << solution12({ 1, 1, 1 }, 4) << "\n"; // 2
-    cout << "answer: " << solution12({ 10, 10, 10, 10, 10 }, 100) << "\n"; // 4
-    cout << "answer: " << solution12({ 1, 2, 3, 9, 10, 12 }, 7) << "\n"; // 2
-    cout << "answer: " << solution12({ 0, 0, 3, 9, 10, 12 }, 7000) << "\n"; // -1
-    cout << "answer: " << solution12({ 0, 0 }, 0) << "\n"; // 0
-    cout << "answer: " << solution12({ 0, 0 }, 1) << "\n"; // -1
-    cout << "answer: " << solution12({ 1, 0 }, 1) << "\n"; // 1
+    cout << "answer: " << solution({ 1, 2, 3, 9, 10, 12 }, 7) << "\n"; // 2
+    cout << "answer: " << solution({ 1, 1, 1 }, 4) << "\n"; // 2
+    cout << "answer: " << solution({ 10, 10, 10, 10, 10 }, 100) << "\n"; // 4
+    cout << "answer: " << solution({ 1, 2, 3, 9, 10, 12 }, 7) << "\n"; // 2
+    cout << "answer: " << solution({ 0, 0, 3, 9, 10, 12 }, 7000) << "\n"; // -1
+    cout << "answer: " << solution({ 0, 0 }, 0) << "\n"; // 0
+    cout << "answer: " << solution({ 0, 0 }, 1) << "\n"; // -1
+    cout << "answer: " << solution({ 1, 0 }, 1) << "\n"; // 1
 }*/
 
 /*

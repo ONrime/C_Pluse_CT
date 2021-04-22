@@ -29,13 +29,13 @@ int solution(vector<int> people, int limit) {
     return answer;
 }
 
-int main()
+/*int main()
 {
     cout << "answer: " << solution({ 70, 50, 80, 50 }, 100) << "\n"; // 3
     cout << "answer: " << solution({ 70, 50, 80, 50, 50 }, 100) << "\n"; // 4
     cout << "answer: " << solution({ 70, 80, 50 }, 100) << "\n"; // 3
     cout << "answer: " << solution({ 40, 40, 80 }, 160) << "\n"; // 2
-}
+}*/
 
 /*
 

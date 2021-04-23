@@ -58,12 +58,12 @@ int solution(int n, vector<vector<int>> costs) {
     cout << endl;
     return answer;
 }
-int main()
+/*int main()
 {
     //cout << "answer: " << solution(4, { {0, 1, 1}, {0, 2, 2}, {1,2,5}, {1, 3, 1}, {2, 3 ,8} }) << "\n"; // 4
     //cout << "answer: " << solution(6, { {0, 1, 5}, {0, 3, 2}, {0, 4, 3}, {1, 4, 1}, {3, 4, 10}, {1, 2, 2}, {2, 5, 3},{4, 5, 4} }) << "\n"; // 11
     cout << "answer: " << solution(5, { {0, 1, 5}, {1, 2, 3}, {2, 3, 3}, {3, 1, 2}, {3, 0, 4}, {2, 4, 6}, {4, 0, 7} }) << "\n"; // 15
-}
+}*/
 
 /*
 

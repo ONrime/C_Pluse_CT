@@ -32,11 +32,11 @@ int solution(int N, int number) {
     return min_num;
 }
 
-int main()
+/*int main()
 {
     cout << "answer: " << solution(5, 12) << "\n"; // 4
     cout << "answer: " << solution(2, 11) << "\n"; // 3
-}
+}*/
 
 /*
 

@@ -64,7 +64,7 @@ int solution13(vector<vector<int>> jobs) {
     return answer;
 }
 
-int main()
+/*int main()
 {
     cout << "answer: " << solution13({ { 0, 3 }, { 1, 9 }, { 2, 6 } }) << "\n"; //9
     cout << "answer: " << solution13({ { 0, 10 }, { 2, 10 }, { 9, 10 }, { 15, 2 } }) << "\n"; //14
@@ -76,7 +76,7 @@ int main()
     cout << "answer: " << solution13({ {100, 100} ,{1000, 1000}}) << "\n"; //550
     cout << "answer: " << solution13({ {10, 10} ,{30, 10}, {50, 2}, {51, 2} }) << "\n"; //6
     cout << "answer: " << solution13({ {0, 3} ,{1, 9}, {2, 6}, {30, 3} }) << "\n"; //7
-}
+}*/
 
 /*
 

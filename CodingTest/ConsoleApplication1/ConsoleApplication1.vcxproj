@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="18.cpp" />
     <ClCompile Include="19.cpp" />
+    <ClCompile Include="20.cpp" />
     <ClCompile Include="Greedy_Boat.cpp" />
     <ClCompile Include="Greedy_EnforcementCamera.cpp" />
     <ClCompile Include="Greedy_GreatNum.cpp" />

@@ -80,29 +80,36 @@ vector<string> solution24(vector<string> record) {
 
         char* str = nullptr;
         char* ptr = strtok_s((char*)(*iter).c_str(), " ", &str);
+        state.push_back(ptr);
+        cout << "ptr: " << ptr << endl;
+
         while (ptr != nullptr)
         {
-            //cout << "split: " << ptr << endl;
-            if (ptr == "Enter") {
-                state.push_back("들어왔습니다.");
+            if (state.back() == "Enter") {
+                state.pop_back();
+                state.push_back("님이 들어왔습니다.");
                 ptr = strtok_s(nullptr, " ", &str);
                 user_id.push_back(ptr);
                 id = ptr;
                 ptr = strtok_s(nullptr, " ", &str);
                 user[id] = ptr;
+                cout << "user_id: " << user_id.back() << endl;
             }
             else if (ptr == "Leave") {
-                state.push_back("나갔습니다.");
+                state.pop_back();
+                state.push_back("님이 나갔습니다.");
                 ptr = strtok_s(nullptr, " ", &str);
                 user_id.push_back(ptr);
             }
             else if (ptr == "Change") {
+                state.pop_back();
                 ptr = strtok_s(nullptr, " ", &str);
                 id = ptr;
                 ptr = strtok_s(nullptr, " ", &str);
                 user[id] = ptr;
                 continue;
             }
+            
             ptr = nullptr;
         }
 
@@ -113,7 +120,9 @@ vector<string> solution24(vector<string> record) {
     }
 
     for (int i = 0; i < 5; i++) {
-        answer.push_back(user[user_id[i]] + state[i]); //아이디에 해당하는 닉네임을 붙여줌
+        //state[i];
+        string u = user[user_id[i]] + state[i];
+        answer.push_back(u); //아이디에 해당하는 닉네임을 붙여줌
     }
 
     cout << "Log" << endl << endl;
@@ -160,7 +169,7 @@ vector<string> solution24(vector<string> record) {
     return answer;
 }*/
 
-int main()
+/*int main()
 {
     solution24({ "Enter uid1234 Muzi"
         , "Enter uid4567 Prodo"
@@ -168,7 +177,7 @@ int main()
         , "Enter uid1234 Prodo"
         , "Change uid4567 Ryan" });
     solution24({ "Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan", "Enter uid1254 Prodokk" });
-}
+}*/
 
 /*
 

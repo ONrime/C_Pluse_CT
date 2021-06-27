@@ -153,6 +153,7 @@
     <ClCompile Include="21.cpp" />
     <ClCompile Include="22.cpp" />
     <ClCompile Include="23.cpp" />
+    <ClCompile Include="24.cpp" />
     <ClCompile Include="Greedy_Boat.cpp" />
     <ClCompile Include="Greedy_EnforcementCamera.cpp" />
     <ClCompile Include="Greedy_GreatNum.cpp" />

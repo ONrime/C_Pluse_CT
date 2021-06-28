@@ -18,14 +18,14 @@ string solution25(int n) {
     return answer;
 }
 
-int main()
+/*int main()
 {
     solution25(39);
     solution25(10);
     solution25(11);
     solution25(12);
     solution25(500000000);
-}
+}*/
 
 /*
 

@@ -1,2 +1,5 @@
-﻿  24.cpp
+﻿  25.cpp
+D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\25.cpp(17,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\25.cpp(18,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\GitHub\CodeTest\CodingTest\ConsoleApplication1\25.cpp(39,18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
   ConsoleApplication1.vcxproj -> D:\GitHub\CodeTest\CodingTest\Debug\ConsoleApplication1.exe

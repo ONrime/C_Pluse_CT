@@ -29,10 +29,10 @@ int solution27(vector<int> numbers, int target) {
     cout << "answer: " << answer << endl;
     return answer;
 }
-int main()
+/*int main()
 {
     solution27({ 1, 1, 1, 1, 1 }, 3); // 5
-}
+}*/
 /*
 
 Å¸°Ù ³Ñ¹ö

@@ -2,45 +2,53 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <map>
 #include <algorithm>
 
 using namespace std;
 
-bool solution(vector<string> phone_book) {
-    bool answer = true;
-    unordered_map<string, int> phonebook_hash; // 번호, 길이
-
-    sort(phone_book.begin(), phone_book.end());
-    for (auto pb : phone_book) {
-        phonebook_hash.insert(make_pair(pb, pb.size()));
+bool cmp(string a, string b) {
+    if (a.compare(b) > 0) {
+        return false;
     }
+    else { return true; }
+}
 
-    unordered_map<string, int>::iterator iter;
-    unordered_map<string, int>::iterator iter2; // 과거
+bool solution00(vector<string> phone_book) {
+    bool answer = true;
+    map<string, int> phonebook_hash; // 번호, 길이
+
+    sort(phone_book.begin(), phone_book.end(), cmp);
+    for (auto pb : phone_book) { phonebook_hash.insert(make_pair(pb, pb.size())); }
+
+    map<string, int>::iterator iter;
+    map<string, int>::iterator iter2; // 과거
     for (iter = phonebook_hash.begin(); iter != phonebook_hash.end(); iter++) {
         if (iter == phonebook_hash.begin()) {
             iter2 = iter;
             continue;
         }
-        if (iter2->first == iter->first.substr(0, iter2->second)) {
-            return false;
-        }
-        if (iter2 != phonebook_hash.end()) {
-            iter2++;
-        }
+        if (iter2->first == iter->first.substr(0, iter2->second)) { return false; }
+        if (iter2 != phonebook_hash.end()) { iter2++; }
     }
     return answer;
 }
 
 /*int main()
 {
-    std::cout << "solution: " << solution({ "119", "97674223", "1195524421" }) << "\n";
-    std::cout << "solution: " << solution({ "123","456","789" }) << "\n";
-    std::cout << "solution: " << solution({ "12","123","1235","567","88" }) << "\n";
-    std::cout << "solution: " << solution({ "abc", "aa", "abcd", "aza", "bcda" }) << "\n";
+    cout << "solution: " << solution00({ "119", "97674223", "1195524421" }) << "\n";
+    cout << "solution: " << solution00({ "1111", "1111111", "11915524421" }) << "\n";
+    cout << "solution: " << solution00({ "1111", "11915524421", "1111111" }) << "\n";
+    cout << "solution: " << solution00({ "123","456","789" }) << "\n";
+    cout << "solution: " << solution00({ "12","123","1235","567","88" }) << "\n";
+    cout << "solution: " << solution00({ "abc", "aa", "abcd", "aza", "bcda" }) << "\n";
+    cout << "solution: " << solution00({ "112","44","4544" }) << "\n";
+    //cout << "solution: " << false << "\n";
 }*/
 
 /*
+
+전화번호 목록
 
 문제 설명
 전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.

@@ -27,9 +27,6 @@
     <ClCompile Include="Hash_Combine-Greate-Num.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Sort_Camouflage.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Sort_H-Index.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -118,6 +115,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

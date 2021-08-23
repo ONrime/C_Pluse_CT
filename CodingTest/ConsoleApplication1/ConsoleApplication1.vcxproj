@@ -176,7 +176,7 @@
     <ClCompile Include="Serch_Find_PrimeNumber.cpp" />
     <ClCompile Include="Sort_H-Index.cpp" />
     <ClCompile Include="01.cpp" />
-    <ClCompile Include="Hash02.cpp" />
+    <ClCompile Include="02.cpp" />
     <ClCompile Include="linked_list.cpp" />
     <ClCompile Include="Serch_MouiTest.cpp" />
     <ClCompile Include="StackQueue_Function_develop.cpp" />

@@ -21,9 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Hash01.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Hash02.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -118,6 +115,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="32.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="01.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

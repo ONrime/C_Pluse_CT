@@ -100,12 +100,12 @@ int solution(vector<int> priorities, int location) {
     return answer;
 }*/
 
-int main()
+/*int main()
 {
     solution33({ 2, 1, 3, 2 }, 2); // 1
     solution33({ 1, 1, 9, 1, 1, 1 }, 0); // 5
     solution33({ 1, 1, 3, 1, 4 }, 3); // 5
-}
+}*/
 /*
 
 «¡∏∞≈Õ

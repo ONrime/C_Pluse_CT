@@ -39,9 +39,6 @@
     <ClCompile Include="Serach_MakeCarpet.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Hash_BestAlbum.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Greedy_Gymsuit.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -118,6 +115,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="03.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="04.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

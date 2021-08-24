@@ -168,7 +168,7 @@
     <ClCompile Include="Greedy_Gymsuit.cpp" />
     <ClCompile Include="Greedy_IslandConnect.cpp" />
     <ClCompile Include="Greedy_Joystick.cpp" />
-    <ClCompile Include="Hash_BestAlbum.cpp" />
+    <ClCompile Include="04.cpp" />
     <ClCompile Include="Heap_Scov.cpp" />
     <ClCompile Include="Serach_MakeCarpet.cpp" />
     <ClCompile Include="03.cpp" />

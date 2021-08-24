@@ -6,11 +6,52 @@
 
 using namespace std;
 
-int solution33(vector<int> priorities, int location) {
+/*
+
+프린터
+
+solution_6_1처럼 pair를 쓰면 데이터를 더 쓰지만 빠르게 할 수 있다.
+solution_6_2는 max_element를 이용한 풀이 이다.
+다른 사람 풀이의 첫번째 꺼를 보면 solution_6_1보다 시간이 걸리지만 데이터를 덜 쓸 수 있는 풀이가 있다.
+
+max_element는 배열중에서 가장 많은 값의 iter를 반환한다.
+
+*/
+
+int solution_6_1(vector<int> priorities, int location) {
     int answer = 0;
-    int count = 0;
-    vector<int> max = priorities;
-    sort(max.begin(), max.end());
+
+    // 최대 값으로 정렬하고 (사실은 최소순으로 정렬한 거다. vector는 front()가 없어서 back으로 활용하기 위해 최소순으로 정렬했다.)
+    vector<int> max = priorities;  
+    sort(max.begin(), max.end()); 
+
+    queue<pair<int, int>> temp; // temp에 위치와 크기(priorities)를 넣는다.
+    for (int i = 0; i < priorities.size(); i++) {
+        temp.push(pair<int, int>(i, priorities[i]));
+    }
+    while (!temp.empty()) 
+    {
+        int front = temp.front().second;
+        int position = temp.front().first;
+        temp.pop();
+        if (max.back() != front) 
+        { // 최대가 아니면
+            temp.push(pair<int, int>(position, front));
+        }
+        else 
+        { // 최대라면 카운트하라.
+            answer++;
+            if (position == location) break; // 찾는 위치값이면 나가라.
+            max.pop_back();
+        }
+    }
+
+    cout << "answer: " << answer << endl;
+    return answer;
+}
+
+int solution_6_2(vector<int> priorities, int location) {
+    int answer = 0;
 
     queue<pair<int, int>> temp;
     for (int i = 0; i < priorities.size(); i++) {
@@ -18,21 +59,28 @@ int solution33(vector<int> priorities, int location) {
     }
     while (!temp.empty()) {
         int front = temp.front().second;
-        int position= temp.front().first;
+        int position = temp.front().first;
         temp.pop();
-        if (max.back() != front) {
+        if (*max_element(priorities.begin(), priorities.end()) != front) {
             temp.push(pair<int, int>(position, front));
-        }else { // 나갈 때
-            count++;
+        }
+        else { // 나갈 때
+            answer++;
             if (position == location) break;
-            max.pop_back();
+            priorities[position] = 0;
         }
     }
 
-    answer = count;
     cout << "answer: " << answer << endl;
     return answer;
 }
+
+/*int main()
+{
+    solution_6_2({ 2, 1, 3, 2 }, 2); // 1
+    solution_6_2({ 1, 1, 9, 1, 1, 1 }, 0); // 5
+    solution_6_2({ 1, 1, 3, 1, 4 }, 3); // 5
+}*/
 
 /* 과거에 풀었던 문제방식 */
 /*bool check_loc(int& x) {
@@ -99,15 +147,3 @@ int solution(vector<int> priorities, int location) {
     }
     return answer;
 }*/
-
-/*int main()
-{
-    solution33({ 2, 1, 3, 2 }, 2); // 1
-    solution33({ 1, 1, 9, 1, 1, 1 }, 0); // 5
-    solution33({ 1, 1, 3, 1, 4 }, 3); // 5
-}*/
-/*
-
-프린터
-
-*/

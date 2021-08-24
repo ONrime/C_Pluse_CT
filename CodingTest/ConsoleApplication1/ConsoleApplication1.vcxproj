@@ -179,7 +179,7 @@
     <ClCompile Include="02.cpp" />
     <ClCompile Include="linked_list.cpp" />
     <ClCompile Include="Serch_MouiTest.cpp" />
-    <ClCompile Include="StackQueue_Function_develop.cpp" />
+    <ClCompile Include="05.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="linked_list.h" />

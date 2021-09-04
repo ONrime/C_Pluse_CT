@@ -127,10 +127,10 @@ vector<int> solution_7_3(vector<int> prices) {
     return answer;
 }
 
-int main()
+/*int main()
 {
     solution_7_1({ 1, 2, 3, 2, 3 }); // 4, 3, 1, 1, 0
     solution_7_2({ 1, 2, 3, 2, 3 }); // 4, 3, 1, 1, 0
     solution_7_3({ 1, 2, 3, 2, 3 }); // 4, 3, 1, 1, 0
     //solution_7_1({ 5, 8, 6, 2, 4, 1 }); //3, 1, 1, 2, 1, 0
-}
+}*/

@@ -3,47 +3,54 @@
 #include <iostream>
 template <typename Type>
 class Node {
-private:
-	Type data;
-	Node<Type>* next;
 public:
+	Type data;
+	Node<Type>* next = nullptr;
+
 	template <typename Type>
 	friend class Mlinked_list;
 
 	Node(Type d, Node<Type>* n) : data(d), next(n){}
+	~Node() {};
 };
 
 template <typename Type>
-class Mlinked_list {
+class Single_linkedlist {
 private:
 	Node<Type>* head;
 	Node<Type>* tail;
+	int length = 0;
 
 public:
-	Mlinked_list();
-	~Mlinked_list();
-	int get_lenght();
-	bool is_empty();
-	bool insert(Type data, int postion = 0);
-	void push_front(Type data);
+	Single_linkedlist();
+	~Single_linkedlist();
+	
 	void push_back(Type data);
-	bool del(Type data, int postion = 0);
-	Type pop_front();
-	bool replace(Type data, int postion = 0);
-	void empty_node();  // 
-	Node<Type> find(Type data);
+	Type pop_back();
+	Type back();
+
+	void add(int pos, Type data);
+	void add_first(Type data);
+	void add_last(Type data);
+	void del(int pos);
+	void clear();
+	void replace(int pos, Type data);
+	bool is_in_list(Type data);
+	int get_length();
+	bool is_empty();
+	void display();
 	// 복사 생성자 + 대입 연산자 넣기
 };
-
+/*
 template<typename Type>
-inline Mlinked_list<Type>::Mlinked_list()
+inline Mylinked_list<Type>::Mylinked_list()
 {
 	head = nullptr;
 	tail = nullptr;
 }
 
 template<typename Type>
-inline Mlinked_list<Type>::~Mlinked_list()
+inline Mylinked_list<Type>::~Mylinked_list()
 {
 	Node<Type>* current_node = head;
 	while (current_node) {
@@ -54,7 +61,7 @@ inline Mlinked_list<Type>::~Mlinked_list()
 }
 
 template<typename Type>
-inline int Mlinked_list<Type>::get_lenght()
+inline int Mylinked_list<Type>::get_lenght()
 {
 	Node<Type>* current_node = head;
 	int count = 0;
@@ -66,7 +73,7 @@ inline int Mlinked_list<Type>::get_lenght()
 }
 
 template<typename Type>
-inline bool Mlinked_list<Type>::is_empty()
+inline bool Mylinked_list<Type>::is_empty()
 {
 	if (!head) {
 		return true;
@@ -75,7 +82,7 @@ inline bool Mlinked_list<Type>::is_empty()
 }
 
 template<typename Type>
-inline bool Mlinked_list<Type>::insert(Type data, int postion)
+inline bool Mylinked_list<Type>::insert(Type data, int postion)
 {
 	if (!head) { return false; }
 	Node<Type>* current_node = head;
@@ -98,7 +105,7 @@ inline bool Mlinked_list<Type>::insert(Type data, int postion)
 }
 
 template<typename Type>
-inline void Mlinked_list<Type>::push_front(Type data)
+inline void Mylinked_list<Type>::push_front(Type data)
 {
 	Node<Type>* insert_node = new Node<Type>(data, head);
 	head = insert_node;
@@ -108,7 +115,7 @@ inline void Mlinked_list<Type>::push_front(Type data)
 }
 
 template<typename Type>
-inline void Mlinked_list<Type>::push_back(Type data)
+inline void Mylinked_list<Type>::push_back(Type data)
 {
 	Node<Type>* insert_node = new Node<Type>(data, nullptr);
 	tail->next = insert_node;
@@ -121,25 +128,25 @@ inline void Mlinked_list<Type>::push_back(Type data)
 }
 
 template<typename Type>
-inline bool Mlinked_list<Type>::del(Type data, int postion)
+inline bool Mylinked_list<Type>::del(Type data, int postion)
 {
 	return false;
 }
 
 template<typename Type>
-inline Type Mlinked_list<Type>::pop_front()
+inline Type Mylinked_list<Type>::pop_front()
 {
 	return Type();
 }
 
 template<typename Type>
-inline bool Mlinked_list<Type>::replace(Type data, int postion)
+inline bool Mylinked_list<Type>::replace(Type data, int postion)
 {
 	return false;
 }
 
 template<typename Type>
-inline void Mlinked_list<Type>::empty_node()
+inline void Mylinked_list<Type>::empty_node()
 {
 	Node<Type>* current_node = head->next;
 	while (current_node) {
@@ -151,7 +158,10 @@ inline void Mlinked_list<Type>::empty_node()
 }
 
 template<typename Type>
-inline Node<Type> Mlinked_list<Type>::find(Type data)
+inline Node<Type> Mylinked_list<Type>::find(Type data)
 {
 	return Node<Type>();
 }
+*/
+
+

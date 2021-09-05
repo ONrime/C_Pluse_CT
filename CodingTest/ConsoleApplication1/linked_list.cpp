@@ -206,7 +206,7 @@ bool Single_linkedlist<Type>::is_in_list(Type data)
     return false;
 }
 
-int main()
+/*int main()
 {
     Single_linkedlist<int> list;
     int a = 10;
@@ -227,5 +227,5 @@ int main()
     list.insert(3);
     if (!list.insert(3)) {
         std::cout << "false" << "\n";
-    }*/
-}
+    }
+}*/

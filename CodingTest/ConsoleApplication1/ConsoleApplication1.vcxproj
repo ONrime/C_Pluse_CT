@@ -172,6 +172,7 @@
     <ClCompile Include="Greedy_Joystick.cpp" />
     <ClCompile Include="04.cpp" />
     <ClCompile Include="Heap_Scov.cpp" />
+    <ClCompile Include="MyQuickSort.cpp" />
     <ClCompile Include="Serach_MakeCarpet.cpp" />
     <ClCompile Include="03.cpp" />
     <ClCompile Include="Hash_Combine-Greate-Num.cpp" />
@@ -185,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="linked_list.h" />
+    <ClInclude Include="MyQuickSort.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

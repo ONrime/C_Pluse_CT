@@ -129,6 +129,12 @@
     <ClCompile Include="MyQuickSort.cpp">
       <Filter>소스 파일\structure</Filter>
     </ClCompile>
+    <ClCompile Include="33.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="34.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

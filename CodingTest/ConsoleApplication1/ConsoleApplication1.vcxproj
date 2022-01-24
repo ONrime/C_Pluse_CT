@@ -168,6 +168,8 @@
     <ClCompile Include="34.cpp" />
     <ClCompile Include="35.cpp" />
     <ClCompile Include="36.cpp" />
+    <ClCompile Include="37.cpp" />
+    <ClCompile Include="38.cpp" />
     <ClCompile Include="Greedy_Boat.cpp" />
     <ClCompile Include="Greedy_EnforcementCamera.cpp" />
     <ClCompile Include="Greedy_GreatNum.cpp" />
@@ -177,6 +179,7 @@
     <ClCompile Include="04.cpp" />
     <ClCompile Include="Heap_Scov.cpp" />
     <ClCompile Include="MyQuickSort.cpp" />
+    <ClCompile Include="MyStack.cpp" />
     <ClCompile Include="Serach_MakeCarpet.cpp" />
     <ClCompile Include="03.cpp" />
     <ClCompile Include="Hash_Combine-Greate-Num.cpp" />
@@ -191,6 +194,7 @@
   <ItemGroup>
     <ClInclude Include="linked_list.h" />
     <ClInclude Include="MyQuickSort.h" />
+    <ClInclude Include="MyStack.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

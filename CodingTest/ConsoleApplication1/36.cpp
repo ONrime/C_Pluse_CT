@@ -9,27 +9,27 @@ int solution_36_1(int m, int n, vector<vector<int>> puddles) {
     int answer = 0;
 
     vector<vector<int>> temp(n, vector<int>(m));
-
-    sort(puddles.begin(), puddles.end());
-    auto iter = puddles.begin();
+    temp[0][0] = 1;
+    
+    for (int o = 0; o < puddles.size(); o++)
+    {
+       // cout << "puddles: " << puddles[o][1] << " " << puddles[o][0] << endl;
+        temp[puddles[o][1]-1][puddles[o][0]-1] = -1;
+    }
 
     for (int i = 1; i < n + 1; i++)
     {
         for (int j = 1; j < m + 1; j++)
         {
-            if (iter != puddles.end() && (*iter)[0] - 1 == i - 1 && (*iter)[1] - 1 == j - 1)
+            if (temp[i - 1][j - 1] == -1)
             {
-                iter++;
+                temp[i - 1][j - 1] = 0;
                 continue;
-            }
-            if (i == 1 || j == 1)
-            {
-                temp[i - 1][j - 1] = 1;
             }
             else 
             {
-                temp[i - 1][j - 1] += temp[i - 2][j - 1];
-                temp[i - 1][j - 1] += temp[i - 1][j - 2];
+                if (i >= 1 && j > 1) temp[i - 1][j - 1] += temp[i - 1][j - 2];
+                if (j>= 1 && i > 1) temp[i - 1][j - 1] += temp[i - 2][j - 1];
             }
             temp[i - 1][j - 1] = temp[i - 1][j - 1] % 1000000007;
         }
@@ -47,6 +47,31 @@ int solution_36_1(int m, int n, vector<vector<int>> puddles) {
     cout << "answer: " << answer % 1000000007 << endl;
     return answer;
 }
+
+
+
+/*int main()
+{
+    solution_36_1(4, 3, {{2,2}}); // 4
+    //solution_36_1(4, 4, { {2, 3}, {4, 2} }); // 7
+    //solution_36_1(3, 3, { {2, 2} }); // 2
+    //solution_36_1(3, 3, { {2, 3} }); // 3
+    //solution_36_1(3, 3, { {3, 2} }); // 3
+    //solution_36_1(3, 3, { {1, 3} }); // 5
+    //solution_36_1(3, 3, { {1, 3}, {3, 1} }); // 4
+    //solution_36_1(3, 3, { {1, 3}, {3, 1}, {2, 3}, {2, 2}}); // 0
+    
+    //solution_36_1(3, 3, { {1, 3}, {3, 1}, {2, 3}}); // 2
+    //solution_36_1(3, 3, { {1, 3}, {3, 1}, {2, 3}}); // 2
+    //solution_36_1(3, 3, { {1, 3}, {3, 1}, {2, 3}, {2, 1}}); // 1
+    //solution_36_1(7, 4, { {2, 1}, {2, 2}, {2, 3}, {4, 2}, {4, 3}, {4, 4}, {6, 2}, {6, 3} }); // 0
+    //solution_36_1(4, 4, { {3, 2}, {2, 4}}); // 7
+    
+    solution_36_1(1, 3, { {1, 2}}); // 7
+    solution_36_1(3, 1, { {2, 1}}); // 7
+    solution_36_1(2, 2, { {2, 1}, {1, 2}}); // 7
+
+}*/
 
 /*
 
@@ -151,21 +176,3 @@ return answer;
 }
 
 */
-
-int main()
-{
-    //solution_36_1(4, 3, { {2,2} }); // 4
-    //solution_36_1(4, 4, { {2, 3}, {4, 2} }); // 7
-    //solution_36_1(3, 3, { {2, 2} }); // 2
-    //solution_36_1(3, 3, { {2, 3} }); // 3
-    //solution_36_1(3, 3, { {3, 2} }); // 3
-    //solution_36_1(3, 3, { {1, 3} }); // 5
-    //solution_36_1(3, 3, { {1, 3}, {3, 1} }); // 4
-    //solution_36_1(3, 3, { {1, 3}, {3, 1}, {2, 3}, {2, 2}}); // 4
-    
-    solution_36_1(3, 3, { {1, 3}, {3, 1}, {2, 3}}); // 2
-    solution_36_1(3, 3, { {1, 3}, {3, 1}, {2, 3}}); // 2
-    solution_36_1(3, 3, { {1, 3}, {3, 1}, {2, 3}, {2, 1}}); // 1
-    solution_36_1(7, 4, { {2, 1}, {2, 2}, {2, 3}, {4, 2}, {4, 3}, {4, 4}, {6, 2}, {6, 3} }); // 0
-    solution_36_1(4, 4, { {3, 2}, {2, 4}}); // 7
-}

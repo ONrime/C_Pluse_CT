@@ -11,7 +11,7 @@ using namespace std;
 * Âü°í https://ip99202.github.io/posts/sync_with_stdio(false)-%EC%93%B8-%EB%95%8C-%EC%A3%BC%EC%9D%98%ED%95%A0-%EC%82%AC%ED%95%AD/
 */
 
-int main(void)
+/*int main(void)
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
@@ -48,4 +48,4 @@ int main(void)
 
     cout << answer << endl;
     return 0;
-}
+}*/

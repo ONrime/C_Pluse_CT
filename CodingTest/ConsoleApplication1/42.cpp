@@ -4,9 +4,11 @@
 using namespace std;
 
 /* 물병
+* 2의 제곱 문제이다.
+* 같은 수를 더한다고 했을 때 2의 제곱이라고 생각하자.
 */
 
-int main(void)
+/*int main(void)
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
@@ -57,7 +59,7 @@ int main(void)
     cout << answer << endl;
     return 0;
 }
-
+*/
 
 
 

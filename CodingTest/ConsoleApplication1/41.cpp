@@ -7,7 +7,7 @@ using namespace std;
 */
 
 
-int main(void)
+/*int main(void)
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
@@ -43,4 +43,4 @@ int main(void)
     cout << ((x - x_count) >= (y - y_count) ? (x - x_count) : (y - y_count)) << endl;
 
     return 0;
-}
+}*/

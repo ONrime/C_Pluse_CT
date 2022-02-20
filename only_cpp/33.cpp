@@ -5,6 +5,12 @@
 
 using namespace std;
 
+/*
+
+게임 맵 최단거리
+
+*/
+
 /* DFS 깊이 우선 탐색 방식 */
 void FindEnd(vector<vector<int>> maps, int i, int j, bool check[][100], int count, int& answer, int endi, int endj)
 {
@@ -89,9 +95,3 @@ int solution32(vector<vector<int>> maps)
     solution32({ {1, 0, 1, 1, 1},{1, 0, 1, 0, 1 }, {1, 0, 1, 1, 1}, {1, 1, 1, 0, 1},{0, 0, 0, 0, 1} }); // 11
     solution32({ {1, 0, 1, 1, 1},{1, 0, 1, 0, 1 }, {1, 0, 1, 1, 1}, {1, 1, 1, 0, 0},{0, 0, 0, 0, 1} }); // -1
 }*/
-
-/*
-
-게임 맵 최단거리
-
-*/

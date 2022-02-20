@@ -25,7 +25,6 @@ int main(void)
     cin >> t;
     
 	
-
     for (int i = 0; i < t; i++)
     {
         vector<pair<int, int>> h;

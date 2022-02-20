@@ -35,11 +35,10 @@ Im not very well coding skill but i try to get better.
 30. 단어 변환
 31. 최솟값 만들기 X
 32. N진수 게임
-33. 프린터
-34. -- ?
-35. 정수 삼각형
-36. -- ?
-37. 매칭점수 X
+33. 게임 맵 최단 거리
+34. 프린터
+36. 줄서는 방법
+37. 정수 삼각형
 38. 순위
 
 ### 백준
@@ -49,5 +48,4 @@ Im not very well coding skill but i try to get better.
 42. 물병
 43. 팔
 44. Z
-45. 호텔 X
 46. 신입사원

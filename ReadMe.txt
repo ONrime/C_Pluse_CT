@@ -49,3 +49,5 @@ Im not very well coding skill but i try to get better.
 43. 팔
 44. Z
 46. 신입사원
+47. 배
+48. 단어 수학

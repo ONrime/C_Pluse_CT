@@ -51,3 +51,5 @@ Im not very well coding skill but i try to get better.
 46. 신입사원
 47. 배
 48. 단어 수학
+50. 시간 관리
+52. 밑줄
